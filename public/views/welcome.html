@@ -1,0 +1,11 @@
+<h1>{{ PrettyModel }}</h1>
+<a href="" ng-click="navMe()">Say Goodbye!</a>
+<form ng-submit="submitMe()">
+  <input type="text" ng-model="PrettyModel" />
+  <input type="submit">
+</form>
+
+  <ul ng-repeat="model in prettyModels">
+    <li>{{ model }}</li>
+  </ul>
+

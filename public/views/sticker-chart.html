@@ -1,0 +1,21 @@
+<h1>Sticker Chart FTW!</h1>
+
+<!-- <form ng-submit="addToddler()">
+  <label for="add-todo">Add Toddler</label>
+  <input id="add-user" ng-model="user" type="text">
+  <input type="submit" value="Add Toddler">
+</form> -->
+
+<ul>
+  <li ng-repeat="user in users">
+    <p>{{user.name}}</p>
+    <ul>
+      <li ng-repeat="star in user.stars">
+        <p>{{star.task_name}}: {{star.counter}}</p>
+        <div ng-bind-html-unsafe="showStar( star.counter)"></div>
+        <!-- {{showStar( star.counter )}} -->
+      </li>
+    </ul>
+  </li>
+</ul>
+

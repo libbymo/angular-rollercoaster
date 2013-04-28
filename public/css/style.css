@@ -1,0 +1,19 @@
+html,
+body {
+  color:#000;
+  padding: 0px;
+  margin: 0px;
+  background: #fff;
+  font-family: arial;
+}
+.done-true label {
+	text-decoration: line-through;
+	color: #999;
+}
+.sticker {
+	background: transparent url('../img/sticker-0.jpg') 0 0 no-repeat;
+	width: 100px;
+	height: 159px;
+	display: inline-block;
+	margin-right: 10px;
+}
