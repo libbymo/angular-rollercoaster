@@ -1,10 +1,3 @@
-Rollercoaster.directive('sticker', function () {
-	return {
-		restrict: "E",
-		template: "<i class='icon-heart'><i>"
-	}
-})
-
 Rollercoaster.controller('StickerChartCtrl', function ($scope, $location) {
 	$scope.users = [
 		{ 
@@ -52,12 +45,20 @@ Rollercoaster.controller('StickerChartCtrl', function ($scope, $location) {
 		return stickers;
 		
 	};
-		
-	// $scope.addUser = function() {
-	// 	$scope.user.push( {name: $scope.name} );
-	// 	$scope.name = "";
-	// };
 	
+	$scope.addUser = function() {
+		$scope.users.push( { name: $scope.user} );
+		$scope.user = "";
+	};
+	
+	$scope.addStar = function( user ) {
+		// find the user, push star into that array.
+	}
+	
+	// $scope.addTodo = function() {
+	// 	$scope.todos.push( {"text": $scope.todo, "done": false } );
+	// 	$scope.todo = "";
+	// };
 });
 
 
