@@ -1,3 +1,20 @@
+Rollercoaster.controller('HomeCtrl', function($scope, $location) {
+	
+	$scope.navToTodo = function() {
+		$location.url('/todo');
+	};
+	
+	$scope.navToStickerchart = function() {
+		$location.url('/stickerchart');
+	};
+	
+	// $scope.navTo = function( viewName ) {
+	// 	console.log("'/" + $scope.viewName + "'");
+	//     $location.url("'/" + viewName + "'");
+	//   }
+
+});
+
 Rollercoaster.controller('StickerChartCtrl', function ($scope, $location) {
 	$scope.users = [
 		{ 
@@ -5,7 +22,7 @@ Rollercoaster.controller('StickerChartCtrl', function ($scope, $location) {
 			name: "Libby",
 			stars: [
 				{
-					task_name: "Potty",
+					task_name: "No Hitting",
 					counter: 1
 				},
 				{
@@ -29,14 +46,14 @@ Rollercoaster.controller('StickerChartCtrl', function ($scope, $location) {
 			name: "Nathan",
 			stars: [
 				{
-					task_name: "Used Manners",
+					task_name: "Ate Veggies",
 					counter: 4
 				}
 			]
 		}
 	];
 	
-	$scope.showStar = function( counter) {
+	$scope.showStar = function( counter ) {
 		var stickers = "";
 		for( var i=0; i< counter; i++ ) {
 			stickers += "<p class='sticker'></p>";

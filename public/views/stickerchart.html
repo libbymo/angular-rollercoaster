@@ -1,32 +1,29 @@
-<h1>Sticker Chart FTW!</h1>
+<h1>Sticker Chart</h1>
 
 <form ng-submit="addUser()">
   <h3>Add Toddler</h3>
   <input ng-model="user" type="text">
-  <input type="submit" value="Add Toddler">
+  <button class="btn" type="submit">Add Toddler</button>
 </form>
 
 
 <form ng-submit="addStar()">
   <h3> Add Star </h3>
-  <!-- <select>
-    <option ng-repeat="user in users" value="{{user.name}}">{{user.name}}</option>
-  </select> -->
   
   <select ng-model="selectedName" ng-options="user.name for user in users">
     <option value="">-- choose toddler --</option>
   </select>
   <input type="text" ng-model="taskName">
   
-  <input type="submit">
+  <button class="btn" type="submit">Give a Sticker!</button>
 </form>
 
-<ul>
+<ul class="unstyled sticker-list">
   <li ng-repeat="user in users">
-    <p>{{user.name}}</p>
-    <ul>
+    <h4>{{user.name}}</h4>
+    <ul class="unstyled">
       <li ng-repeat="star in user.stars">
-        <p>{{star.task_name}}: {{star.counter}}</p>
+        <span>{{star.task_name}}:</span>
         <div ng-bind-html-unsafe="showStar( star.counter)"></div>
         <!-- {{showStar( star.counter )}} -->
       </li>

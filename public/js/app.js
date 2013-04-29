@@ -2,10 +2,14 @@ var Rollercoaster = angular.module("Rollercoaster", ['ngSanitize']);
 
 Rollercoaster.config( function( $routeProvider ) {
   $routeProvider
-    .when( '/', {
-      templateUrl: 'views/welcome.html',
-      controller: 'WelcomeCtrl'
-    })
+    // .when( '/', {
+    //   templateUrl: 'views/welcome.html',
+    //   controller: 'WelcomeCtrl'
+    // })
+		.when( '/', {
+			templateUrl: 'views/home.html',
+			controller: 'HomeCtrl'
+		})
     .when( '/goodbye', {
       templateUrl: 'views/goodbye.html',
       controller: 'GoodbyeCtrl'
@@ -15,7 +19,7 @@ Rollercoaster.config( function( $routeProvider ) {
       controller: 'TodoCtrl'
     })
     .when( '/stickerchart', {
-      templateUrl: 'views/sticker-chart.html',
+      templateUrl: 'views/stickerchart.html',
       controller: 'StickerChartCtrl'
     })
     .otherwise( { redirectTo: '/'});

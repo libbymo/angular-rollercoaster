@@ -1,6 +1,6 @@
 <h1>To Do: {{getRemainingTodos()}}/{{getTotalTodos()}}</h1>
 
-<ul>
+<ul class="unstyled">
   <li ng-repeat="todo in todos" class="done-{{todo.done}}">
     <input id="todo-{{$index}}" type="checkbox" ng-model="todo.done" ng-change="isDone">
     <label for="todo-{{$index}}">{{todo.text}}
@@ -10,9 +10,9 @@
 <form ng-submit="addTodo()">
   <label for="add-todo">Add To-Do</label>
   <input id="add-todo" ng-model="todo" type="text">
-  <input type="submit" value="Add ToDo">
+  <button class="btn-primary btn" type="submit">Add To Do</button>
 </form>
 
-<button ng-click="clearCompleted()">Clear Completed</button>
+<button class="btn" ng-click="clearCompleted()">Clear Completed</button>
 
 <coasterCar></coasterCar>
