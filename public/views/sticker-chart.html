@@ -1,18 +1,25 @@
 <h1>Sticker Chart FTW!</h1>
 
 <form ng-submit="addUser()">
-  <label for="add-toddler">Add Toddler</label>
-  <input id="add-toddler" ng-model="user" type="text">
+  <h3>Add Toddler</h3>
+  <input ng-model="user" type="text">
   <input type="submit" value="Add Toddler">
 </form>
 
 
-<!-- <form ng-submit="addStar()">
-  <label for="find-toddler">Find Toddler</label>
-  <select>
-  <input id="add-star" ng-model="user" type="text">
-  <input type="submit" value="Add Toddler">
-</form> -->
+<form ng-submit="addStar()">
+  <h3> Add Star </h3>
+  <!-- <select>
+    <option ng-repeat="user in users" value="{{user.name}}">{{user.name}}</option>
+  </select> -->
+  
+  <select ng-model="selectedName" ng-options="user.name for user in users">
+    <option value="">-- choose toddler --</option>
+  </select>
+  <input type="text" ng-model="taskName">
+  
+  <input type="submit">
+</form>
 
 <ul>
   <li ng-repeat="user in users">
